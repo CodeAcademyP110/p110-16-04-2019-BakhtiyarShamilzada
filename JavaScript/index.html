@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+    integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- <section>
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-8 offset-2">
+                    <p class="lead">Drag Area</p>
+                    <div class="wrapper dragArea">
+                        <div class="inner" draggable="true" data-number="a-i" id="a">A</div>
+                        <div class="inner" draggable="true" data-number="a-i" id="b">B</div>
+                        <div class="inner" draggable="true" data-number="a-i" id="c">C</div>
+                        <div class="inner" draggable="true" data-number="a-i" id="d">D</div>
+                        <div class="inner" draggable="true" data-number="a-i" id="e">E</div>
+                        <div class="inner" draggable="true" data-number="a-i" id="f">F</div>
+                        <div class="inner" draggable="true" data-number="a-i" id="g">G</div>
+                        <div class="inner" draggable="true" data-number="a-i" id="h">H</div>
+                        <div class="inner" draggable="true" data-number="a-i" id="i">I</div>
+                        <div class="inner" draggable="true" data-number="j-s" id="j">J</div>
+                        <div class="inner" draggable="true" data-number="j-s" id="k">K</div>
+                        <div class="inner" draggable="true" data-number="j-s" id="l">L</div>
+                        <div class="inner" draggable="true" data-number="j-s" id="m">M</div>
+                        <div class="inner" draggable="true" data-number="j-s" id="n">N</div>
+                        <div class="inner" draggable="true" data-number="j-s" id="o">O</div>
+                        <div class="inner" draggable="true" data-number="j-s" id="p">P</div>
+                        <div class="inner" draggable="true" data-number="j-s" id="q">Q</div>
+                        <div class="inner" draggable="true" data-number="j-s" id="r">R</div>
+                        <div class="inner" draggable="true" data-number="j-s" id="s">S</div>
+                        <div class="inner" draggable="true" data-number="t-z" id="t">T</div>
+                        <div class="inner" draggable="true" data-number="t-z" id="u">U</div>
+                        <div class="inner" draggable="true" data-number="t-z" id="v">V</div>
+                        <div class="inner" draggable="true" data-number="t-z" id="w">W</div>
+                        <div class="inner" draggable="true" data-number="t-z" id="x">X</div>
+                        <div class="inner" draggable="true" data-number="t-z" id="y">Y</div>
+                        <div class="inner" draggable="true" data-number="t-z" id="z">Z</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-8 offset-2">
+                    <p class="lead">Drop Zone</p>
+                    <div class="wrapper dropZone">
+                        <div class="dropArea a-i text-center" data-min="a" data-max="i">
+                            <p class="lead">A - I</p>
+                        </div>
+
+                        <div class="dropArea j-s text-center" data-min="j" data-max="s">
+                            <p class="lead">J - S</p>
+                        </div>
+
+                        <div class="dropArea t-z text-center" data-min="t" data-max="z">
+                            <p class="lead">T - Z</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+  <div class="container">
+    <div class="row mt-5">
+      <div class="col d-flex justify-content-end">
+          <i class="fas fa-trash fa-lg text-secondary d-none"></i>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col">
+        <div class="folder-box w-100 d-flex flex-wrap">
+          <!-- <div class="folder select m-2 border border-secondary w-25 p-2 text-secondary rounded">
+            <i class="fas fa-folder"></i>
+            Code Academy
+          </div> -->
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="new-folder bg-white shadow d-none">
+          <ul>
+            <li class="d-flex justify-content-between">
+              <h4>New Folder</h4> <i class="fas fa-times"></i>
+            </li>
+            <li>
+              <form action="" id="form" class="d-flex flex-wrap justify-content-end">
+                <input type="text" value="Untitled folder" onclick="this.focus();this.select()" class="w-100 mt-3">
+                <button class="btn mr-3 mt-4 cancel" type="reset">CANCEL</button>
+                <button class="btn btn-primary mt-4 create" type="submit">CREATE</button>
+              </form>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="context-menu d-none">
+          <div class="list-group w-25">
+            <a href="#!" class="list-group-item list-group-item-action folder-plus"><i
+                class="fas fa-folder-plus fa-lg mr-2 text-secondary"></i> New Folder</a>
+            <a href="#!" class="list-group-item list-group-item-action"><i
+                class="fas fa-file-upload fa-lg mr-2 text-secondary"></i> Uploads Files</a>
+            <a href="#!" class="list-group-item list-group-item-action"><i
+                class="fas fa-folder-open fa-lg mr-2 text-secondary"></i> Uploads Folder</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/index.js"></script>
+</body>
+
+</html>
